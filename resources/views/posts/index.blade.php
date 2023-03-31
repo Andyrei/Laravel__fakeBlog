@@ -26,7 +26,7 @@
                     <td>
                         <div class="btn-group h-100">
                             <a href='{{ route('posts.edit', $post->id)}}' class="btn btn-warning d-block">Modify</a>
-                            <form class="mx-3 my-0" action={{ route('posts.delete', $post->id)}} method="POST">
+                            <form class="mx-3 my-0" action={{ route('posts.destroy', $post->id)}} method="POST">
                                 @method('delete')
                                 @csrf
                                 <button type="submit" class="btn btn-danger d-block">Delete</button>

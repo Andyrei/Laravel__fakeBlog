@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+use App\Models\Post;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class PostController2 extends Controller
@@ -11,7 +14,9 @@ class PostController2 extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -19,7 +24,13 @@ class PostController2 extends Controller
      */
     public function create()
     {
-        //
+        //INSERT ARTICLE INTO DB
+        $post = new Post;
+        $post->title = $request->title;
+        $post->contant = $request->content;
+        $flight->save();
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -59,6 +70,8 @@ class PostController2 extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        //DESTROY
+        Post::destroy($id);
+        return redirect()->route('posts.index');
     }
 }

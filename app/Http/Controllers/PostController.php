@@ -36,7 +36,6 @@ class PostController extends Controller
                 'content'=> $request -> content,
                 'updated_at' => new \DateTime(),
             ]);
-
         return redirect() -> route('posts.index');
     }
 
