@@ -2,7 +2,9 @@
 
 {{-- ALL POSTS --}}
 @section('content')
-    <table class="table table-striped text-slate-200">
+
+<div class="max-w-screen-md mx-auto">
+    <table class="table w-full text-slate-200">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -35,4 +37,5 @@
             @endforeach
         </tbody>
     </table>
+</div>
 @endsection
