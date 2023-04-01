@@ -30,7 +30,7 @@
 
             <!-- Page Content -->
             <main class="flex min-h-[80vh] justify-center pt-10">
-                @yield('content')
+                {{$slot}}
             </main>
         </div>
     </body>
