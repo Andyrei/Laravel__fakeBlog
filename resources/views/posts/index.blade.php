@@ -22,7 +22,7 @@
                 <tbody style="color: #fdfdfd">
                     @foreach ($posts as $post)
                         <tr style="color: #fdfdfd">
-                            <th style="color: #fdfdfd" scope="row">
+                            <th class="mr-5" style="color: #fdfdfd" scope="row">
                                 {{ $post->id }}
                             </th>
                             <td style="color: #fdfdfd">
@@ -52,7 +52,7 @@
             </table>
         </div>
     @else
-        <div class="self-center text-center">
+        <div class="self-center text-center text-white">
             <p>There is no article yet!</p>
             <p>But hey,<a class="link ml-1 transition-all hover:underline-offset-4 hover:text-sky-700" href="{{route('posts.create')}}">add one right now!</a></p>
         </div>

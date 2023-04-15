@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PostController2;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Auth;
@@ -17,9 +18,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
